@@ -50,7 +50,6 @@ public class NameSorter {
    */
   public List<Person> readUnsortedFile(String unsortedFile) throws FileNotFoundException
   {
-    System.out.println("Current dir: " + new File("").getAbsolutePath());
     Scanner s = new Scanner(new File(unsortedFile));
     List<Person> names = new ArrayList<>();
     while(s.hasNextLine()) {

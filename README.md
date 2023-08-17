@@ -34,4 +34,7 @@ Janet Parsons</br>
 Frankie Conner Ritter</br>
 Shelby Nathan Yoder</br>
 
-and a file in the working directory called sorted-names-list.txt containing the sorted names.
+and a file in the working directory called sorted-names-list.txt containing the sorted names.</br>
+
+If you have maven installed, you can run from the main project's directory command: mvn clean install</br>
+It will build the project and run tests.

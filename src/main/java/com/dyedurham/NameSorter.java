@@ -54,13 +54,17 @@ public class NameSorter {
     List<Person> names = new ArrayList<>();
     while(s.hasNextLine()) {
       String fullName = s.nextLine();
-      // has to be not blank and have at least one first name
-      if(!fullName.trim().isEmpty() && fullName.contains(" ")) {
+      // has to be not blank
+      if(!fullName.trim().isEmpty()) {
         String[] allNames = fullName.split(" ");
-        // should be not more than 3 first names + 1 last name
-        if(allNames.length < 5) {
+        // should be at least one first name and not more than 3 first names + 1 last name
+        if(allNames.length > 1 && allNames.length < 5) {
           names.add(new Person(fullName));
+        } else {
+          System.out.println("Invalid name: " + fullName);
         }
+      } else {
+        System.out.println("Blank name...");
       }
     }
 
